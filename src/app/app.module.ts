@@ -17,6 +17,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CustomDivComponent } from './custom-div/custom-div.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ToasterComponent } from './toaster/toaster.component';
+import { AuthGuardService } from "./auth-guard.service";
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { ToasterComponent } from './toaster/toaster.component';
     HttpModule,
     BrowserAnimationsModule
   ],
-  providers: [menuService],
+  providers: [menuService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
