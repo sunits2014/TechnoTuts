@@ -1,0 +1,111 @@
+.checkBox_container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: .75em;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkBox_container h4 {
+  padding-bottom: .3em;
+  border-bottom: 1px solid #ccc;
+  flex-basis: 5%;
+}
+
+.checkboxBody {
+  flex-basis: 95%;
+}
+
+.exampleDivs {
+  display: flex;
+  margin-top: 1em;
+  justify-content: space-between;
+}
+
+.exampleDivs .card {
+  flex-basis: 30%;
+  margin: 0 !important;
+}
+
+.checkboxList1,
+.checkboxList2 {
+  margin: 0;
+  padding: 0;
+}
+
+.checkboxList1 li,
+.checkboxList2 li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.checkboxList1 li input[type="checkbox"],
+.checkboxList2 li input[type="checkbox"] {
+  display: none;
+}
+
+.checkboxList1 li input[type="checkbox"]+label,
+.checkboxList2 li input[type="checkbox"]+label {
+  display: flex;
+  padding: .5em 0;
+  line-height: 1em;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkboxList1 li input[type="checkbox"]:checked+label,
+.checkboxList2 li input[type="checkbox"]:checked+label {
+  font-weight: bold;
+}
+
+.checkboxList1 li input[type="checkbox"]+label:before {
+  content: "\f096";
+  font-family: FontAwesome;
+  margin-right: .5em;
+  color: #999;
+  width: 1em;
+  transition: color .3s ease-in-out;
+}
+
+.checkboxList1 li input[type="checkbox"]:checked+label:before {
+  content: "\f14a";
+  color: #333;
+  transition: color .3s ease-in-out;
+}
+
+.checkboxList2 li input[type="checkbox"]+label:before {
+  content: "\f401";
+  font-family: Ionicons;
+  margin-right: .5em;
+  color: #999;
+  width: 1em;
+  transition: color .3s ease-in-out;
+}
+
+.checkboxList2 li input[type="checkbox"]:checked+label:before {
+  content: "\f3fe";
+  color: #333;
+  transition: color .3s ease-in-out;
+}
+
+.ui.card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.floatingButton {
+  position: absolute !important;
+  top: 0.5em;
+  right: 0.5em;
+  margin-right: 0 !important;
+  background-color: dodgerblue !important;
+  color: white !important;
+}
+

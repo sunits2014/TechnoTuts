@@ -1,0 +1,50 @@
+[
+    {
+        "id":"A",
+        "question":"What does Angular 2+ uses for its components ?",
+        "answer1":"Typescript",
+        "answer2":"Javascript",
+        "answer3":"Coffeescript",
+        "answer4":"None of the above"
+    },
+    {
+        "id":"A",
+        "question":"Does Angular 4+ version have separate Animations Module ?",
+        "answer1":"Yes",
+        "answer2":"No",
+        "answer3":"Maybe",
+        "answer4":"No idea"
+    },
+    {
+        "id":"S",
+        "question":"What does semantic HTML mean ?",
+        "answer1":"HTML tags understood by the browser.",
+        "answer2":"Semantic UI Framework",
+        "answer3":"Custom HTML structure",
+        "answer4":"None of the above"
+    },
+    {
+        "id":"FA",
+        "question":"What is Font Awesome library ?",
+        "answer1":"A fonts library",
+        "answer2":"An icons library",
+        "answer3":"A Javascript library",
+        "answer4":"None of the above"
+    },
+    {
+        "id":"IC",
+        "question":"From where are Ionicons derived ?",
+        "answer1":"Ionic Framework",
+        "answer2":"Bootstrap Framework",
+        "answer3":"Foundation Framework",
+        "answer4":"None of the above"
+    },
+    {
+        "id":"FX",
+        "question":"What is CSS3 Flexbox ?",
+        "answer1":"A CSS Framework",
+        "answer2":"A CSS Class",
+        "answer3":"A CSS Skeleton",
+        "answer4":"None of the above"
+    }
+]

@@ -1,0 +1,88 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Work Sans, sans-serif;
+}
+
+* {
+    font-size: 14px !important;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+#myApp:empty + .greetingMsg {
+  opacity: 1;
+}
+
+#myApp:not(:empty) + .greetingMsg {
+  opacity: 0;
+  animation: fadeOut .5s ease-in-out;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.greetingMsg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  transition: all .4s ease-in-out;
+}
+
+.mainContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.greetingMsg {
+  color: white;
+  font-size: 1.5em;
+}
+
+/* Webkit Scrollbar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #1e90ff;  
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
+* {
+  user-select: none;
+}

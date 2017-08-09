@@ -1,0 +1,250 @@
+.customDiv {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.switchCase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.customInfo {
+  /* position: fixed; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 11;
+  background-color: white;
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: 0 0 8px 0 #333;
+  top: auto;
+  left: auto;
+}
+
+.customInfo ul {
+  margin: 0;
+  padding: 0;
+}
+
+.customInfo ul li {
+  list-style-type: none;
+  display: flex;
+}
+
+.customInfo>.ui.cards>.card,
+.customInfo ul li>.ui.card {
+  box-shadow: 0 0 0 0 !important;
+}
+
+.customInfo>.ui.cards>.card>.content>.image,
+.customInfo ul li>.ui.card>.image {
+  background-color: transparent !important;
+  border-radius: 100% !important;
+}
+
+.customInfo>.ui.cards>.card>.content>.label>h3 {
+  margin-bottom: 0;
+}
+
+.customInfo ul li>.ui.card>.content {
+  border-top: none !important;
+  padding: 1em 0 !important;
+}
+
+.customInfo ul li>.ui.card>.content>.header {
+  font-size: 1em !important;
+}
+
+.settingsToggle ul li {
+  display: flex;
+  justify-content: space-between;
+  margin: .5em 0;
+  align-items: center;
+}
+
+.settingsToggle ul li span {
+  flex-basis: 70%;
+  display: flex;
+  align-items: center;
+  color: #666 !important;
+}
+
+
+/*
+.toggleBtn {
+  flex-basis: 20%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggleBtnCredentials {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  margin-top: 0.5em;
+}
+
+.toggleBtnCredentials section {
+  padding: 0.25em 0.5em;
+  background-color: indianred;
+  color: white;
+  cursor: pointer;
+}
+
+.swOn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 25%;
+  background-color: dodgerblue;
+  color: white;
+  z-index: 0;
+   padding: 0.5em; 
+  /* flex-basis: 80%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+  white-space: nowrap;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.swBar {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  left: 75%;
+  top: 0;
+  bottom: 0;
+  background-color: #333;
+   box-shadow: 0 0 0 1px #666; 
+  padding: .5em;
+  transition: all .3s ease-in-out;
+}
+
+.swOff {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  background-color: indianred;
+  color: white;
+  z-index: 0;
+   padding: 0.5em; 
+   flex-basis: 80%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+  white-space: nowrap;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.slideOn {
+  right: 100% !important;
+  transition: all .3s ease-in-out;
+}
+
+.slideBar {
+  left: 0 !important;
+  right: 75% !important;
+  transition: all .3s ease-in-out;
+}
+
+.slideOff {
+  left: 25% !important;
+  transition: all .3s ease-in-out;
+}*/
+
+.toggleBtnCredentials {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5em;
+  position: relative;
+  top: 0.1em;
+}
+
+.toggleBtnCredentials section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+}
+
+.activeTab {
+  border: 1px  solid dodgerblue;
+  border-bottom: 1px solid white !important;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: dodgerblue !important;
+}
+
+#btnCont {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingsToggle>.message {
+  padding: .5em !important;
+}
+
+.passFields {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0.5em;
+  border: 1px  solid dodgerblue ;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.leftborderradius {
+  border-top-left-radius: 4px;
+}
+
+.passFields>.input {
+  display: flex;
+  justify-content: center;
+  margin: .5em 0;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 100%;
+}
+
+.passFields>.input>.label {
+  padding: 0 !important;
+  background-color: transparent;
+  padding-bottom: .25em;
+}
+
+.passFields>.input>input {
+  border-radius: 4px !important;
+  border: 1px solid rgba(34, 36, 38, .15) !important;
+}
+
+#oldPass {
+  pointer-events: none;
+}

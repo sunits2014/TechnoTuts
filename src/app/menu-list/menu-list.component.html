@@ -1,0 +1,17 @@
+<div class="menu">
+    <ul>
+        <li *ngFor="let menu of menuListItem">
+            <a (click)="selectItem(menu)">
+                <i class="{{menu.class}}"></i>
+                <span>{{menu.name}}</span>
+            </a>
+        </li>
+    </ul>
+    <footer>
+        <div>
+            <i class="copyright icon"></i>
+            <small>Developed by Sunit Sinha</small>
+        </div>
+    </footer>
+</div>
+<custom-div (usernameNew)="updateUsername($event)" *ngIf="CustomDiv" [customSection]="customSection" (closeCustomDiv)="closeDiv($event)"></custom-div>

@@ -1,0 +1,75 @@
+<div class="checkBox_container">
+  <h4>Checkboxes and Radio Buttons</h4>
+  <div class="checkboxBody">
+    <span>
+    Usually when we think of creating <i>checkbox</i> or <i>radio</i> buttons, we see them as the old school type where the <i>checkbox</i> is a silver white round bordered box and the <i>radio</i> button is somewhat similar except for the shape. Sometimes, in order to make them look better, we tend to use different UI Frameworks like Bootstrap or Foundation etc. In reality, that can be very easily done with simple CSS and an icons library as FontAwesome or Ionicons or any other of the kind.</span>
+    <div class="exampleDivs">
+      <div class="ui card">
+        <div class="content" (mouseenter)="showBtn('firstDiv')" (mouseleave)="hideBtn()">
+          <button class="ui icon button floatingButton" title="See Code" *ngIf="showOnHover1" [@toggle]>
+            <i class="code icon"></i>
+          </button>
+          <div class="header">Font Awesome Style</div>
+          <div class="description">
+            <ul class="checkboxList1">
+              <li>
+                <input type="checkbox" id="fas1" [(ngModel)]="chk1">
+                <label for="fas1">Superman</label>
+              </li>
+              <li>
+                <input type="checkbox" id="fas2" [(ngModel)]="chk2">
+                <label for="fas2">Spiderman</label>
+              </li>
+              <li>
+                <input type="checkbox" id="fas3" [(ngModel)]="chk3">
+                <label for="fas3">He-Man</label>
+              </li>
+            </ul>
+          </div>
+          <p>
+            <span>Checked Status:</span>
+            <span [innerText]="checkedText1" [ngStyle]="textColor1"></span>
+          </p>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content" (mouseenter)="showBtn('secondDiv')" (mouseleave)="hideBtn()">
+          <button class="ui icon button floatingButton" title="See Code" *ngIf="showOnHover2" [@toggle]>
+            <i class="code icon"></i>
+          </button>
+          <div class="header">Ionicon Style</div>
+          <div class="description">
+            <ul class="checkboxList2">
+              <li>
+                <input type="checkbox" id="ics1" [(ngModel)]="chk4">
+                <label for="ics1">Superman</label>
+              </li>
+              <li>
+                <input type="checkbox" id="ics2" [(ngModel)]="chk5">
+                <label for="ics2">Spiderman</label>
+              </li>
+              <li>
+                <input type="checkbox" id="ics3" [(ngModel)]="chk6">
+                <label for="ics3">He-Man</label>
+              </li>
+            </ul>
+          </div>
+          <p>
+            <span>Checked Status:</span>
+            <span [innerText]="checkedText2" [ngStyle]="textColor2"></span>
+          </p>
+        </div>
+      </div>
+      <div class="ui card">
+        <div class="content">
+          <div class="header">Other Style</div>
+          <div class="description">
+            <p>Cute dogs come in a variety of shapes and sizes. Some cute dogs are cute for their adorable faces, others for
+              their tiny stature, and even others for their massive size.</p>
+            <p>Many people also have their own barometers for what makes a cute dog.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

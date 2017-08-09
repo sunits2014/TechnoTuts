@@ -1,0 +1,72 @@
+<div class="resumeContainer" [@toggleAnim]>
+  <div *ngFor="let person of result">
+    <div class="getImage">
+      <h2>{{person.title}}</h2>
+      <img src="{{person.image}}">
+      <div class="details">
+        <i class="ion-android-pin"></i>
+        <span>{{person.address}}</span>
+      </div>
+      <div class="details">
+        <i class="ion-android-call"></i>
+        <span>{{person.phone}}</span>
+      </div>
+      <div class="details">
+        <i class="ion-android-mail"></i>
+        <span>{{person.email}}</span>
+      </div>
+      <div class="details">
+        <i class="ion-social-linkedin"></i>
+        <span>{{person.linkedin}}</span>
+      </div>
+      <a download href="assets/files/sunitsinha_latest.pdf" class="positive ui button"><i class="ion-android-download"></i>Download Resume</a>
+      <a class="negative ui icon button closeBtn" (click)="closeViewEvnt()"><i class="ion-android-close"></i></a>
+    </div>
+    <div class="getDetails">
+      <div class="details">
+        <div>
+          <i class="ion-pinpoint"></i>
+          <h3>Objective</h3>
+        </div>
+        <p>{{person.objective}}</p>
+      </div>
+      <div class="details">
+        <div>
+          <i class="ion-settings"></i>
+          <h3>Skills</h3>
+        </div>
+        <ul>
+          <li *ngFor="let skill of person.skills">
+            <a>{{skill}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="details">
+        <div>
+          <i class="ion-ribbon-a"></i>
+          <h3>Experience</h3>
+        </div>
+        <ul class="exp">
+          <li *ngFor="let experience of person.experience">
+            <h4>{{experience.designation}}</h4>
+            <a>{{experience.company}}</a>
+            <a>{{experience.duration}}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="details">
+        <div>
+          <i class="ion-pie-graph"></i>
+          <h3>Projects</h3>
+        </div>
+        <ul class="proj">
+          <li *ngFor="let project of person.projects">
+            <h4>{{project.name}}</h4>
+            <a>{{project.duration}}</a>
+            <p>{{project.description}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

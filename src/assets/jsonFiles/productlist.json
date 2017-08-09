@@ -1,0 +1,27 @@
+[
+    {
+        "name":"Alpha",
+        "rate":"200",
+        "quality":"1"
+    },
+    {
+        "name":"Beta",
+        "rate":"400",
+        "quality":"2"
+    },
+    {
+        "name":"Gamma",
+        "rate":"600",
+        "quality":"1"
+    },
+    {
+        "name":"Delta",
+        "rate":"500",
+        "quality":"2"
+    },
+    {
+        "name":"Sigma",
+        "rate":"1000",
+        "quality":"1"
+    }
+]

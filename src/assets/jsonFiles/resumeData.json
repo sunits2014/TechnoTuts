@@ -1,0 +1,44 @@
+[{
+  "title": "Sunit Sinha",
+  "image": "assets/images/me.png",
+  "address": "KR Puram, Bangalore KA, India",
+  "phone": "+91 70222 09655",
+  "linkedin": "https://www.linkedin.com/in/sinhasunit/",
+  "email": "sunit.sinha13@live.com",
+  "objective": "To achieve success by creating a balance between all the six spheres of life i.e. official, personal, health, wealth, social and spiritual and to capitalize my skills for the overall development of myself and my organization as a whole.",
+  "skills": [
+    "HTML5", "CSS3", "jQuery", "Javascript", "Angular 4.2.4", "Bootstrap"
+  ],
+  "experience": [{
+      "designation": "Front End Developer",
+      "company": "Harman Connected Services",
+      "duration": "Sep 2015 - till date"
+    },
+    {
+      "designation": "Team Lead",
+      "company": "Weberex",
+      "duration": "Nov 2011 - Mar 2015"
+    },
+    {
+      "designation": "Web/Graphic Designer",
+      "company": "Weberex",
+      "duration": "Nov 2011 - Mar 2015"
+    }
+  ],
+  "projects": [{
+      "name": "IRI WorkBench",
+      "duration": "Jan 2017 - till date",
+      "description": "Currently working as the Lead UI Developer, responsible for building the entire information flow keeping user perspective in mind. The project is the migration of legacy desktop application to the web format. Using the latest Angular 2 framework to build the app"
+    },
+    {
+      "name": "IRI Media Lift",
+      "duration": "Aug 2016 - Dec 2016",
+      "description": "Worked as the Lead UI Developer, developing a portal consisting of about 25-30 pages. Primarily the layout is Bootstrap and framework is AngularJS. I am responsible for the overall complexity as well as balancing of the layout, the layout is built with Bootstrap."
+    },
+    {
+      "name": "Toyota Telematics Cloud",
+      "duration": "Jan 2016 - July 2016",
+      "description": "Worked as the Lead UI Developer, developing complex UI functionalities as per Client requirement. Coding involved basically HTML, CSS, jQuery and Javascript. Built some complex UI like a Survey Question Builder, a Mobile View Emulator and 4 steps Wizard layout."
+    }
+  ]
+}]

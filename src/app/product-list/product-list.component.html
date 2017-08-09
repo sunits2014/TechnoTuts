@@ -1,0 +1,49 @@
+<div class="productContainer">
+  <h4>Product List<span><i class="add square icon" title="Add Product" (click)="addFormPopup()"></i></span></h4>
+  <div class="productListContainer">
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Rate (INR/per unit)</th>
+        <th>Quality</th>
+        <th>Actions</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let products of result, let i = index">
+          <td>{{i+1}}</td>
+          <td>{{products.name}}</td>
+          <td>{{products.rate}}</td>
+          <td>{{products.quality}}</td>
+          <td>
+            <i class="write square icon" title="Edit Product" (click)="editProduct(i,products)"></i>
+            <i class="trash icon" title="Delete Product" (click)="deleteProduct(products)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="addProductForm" *ngIf="addForm" [@hideAnim]>
+    <form [formGroup]="addUpdateForm" novalidate (ngSubmit)="submitData()">
+      <ul>
+        <li>
+            <label>Name:</label>
+            <input maxlength="10" formControlName="name" type="text" placeholder="product name...">
+        </li>
+        <li>
+            <label>Rate:</label>
+            <input (keypress)="_keyPress($event)" maxlength="4" formControlName="rate" type="text" placeholder="Numbers only, max 4 digits...">
+        </li>
+        <li>
+            <label>Quality:</label>
+            <input (keypress)="_keyPress($event)" maxlength="1" formControlName="quality" type="text" placeholder="max 1 digit...">
+        </li>
+      </ul>
+      <div class="btnContainer">
+          <button class="positive ui button" type="submit" *ngIf="!addClicked" [disabled]="!addUpdateForm.valid">Add</button>
+          <button class="positive ui button" type="submit" *ngIf="addClicked">Update</button>
+          <button class="positive ui button" type="button" (click)="hideAddForm()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

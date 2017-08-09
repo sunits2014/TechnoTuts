@@ -1,0 +1,121 @@
+<div class="switchCase" [ngSwitch]="customSwitch">
+  <div class="customDiv" [@hideAnim] *ngSwitchCase="'profileInfoClicked'" (click)="hideCustomDiv()"></div>
+  <div class="customInfo" [@hideAnim] *ngSwitchCase="'profileInfoClicked'">
+    <ul>
+      <li *ngFor="let info of result">
+        <div class="ui centered card">
+          <div class="image">
+            <img src="{{info.image}}">
+          </div>
+          <div class="content">
+            <label>Username:</label>
+            <span class="header" [innerText]="usernameLocal"></span>
+          </div>
+          <div class="content">
+            <label>Password:</label>
+            <span class="header" [innerText]="passwordLocal"></span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="customDiv" [@hideAnim] *ngSwitchCase="'accountSettingsClicked'"></div>
+  <div class="customInfo" [@hideAnim] *ngSwitchCase="'accountSettingsClicked'">
+    <div class="ui cards">
+      <div class="card">
+        <div class="content">
+          <img class="right floated mini ui image" src="assets/images/user.jpg">
+          <div class="label">
+            <h3>Account Settings</h3>
+            <span [innerText]="usernameLocal"></span>
+          </div>
+        </div>
+        <div class="extra content">
+          <div class="settingsToggle">
+            <ul>
+              <li *ngFor="let settings of settingsArray, let i = index">
+                <span>{{settings}}</span>
+                <div class="ui checkbox">
+                  <input type="checkbox" name="example">
+                  <label for="i"></label>
+                </div>
+              </li>
+            </ul>
+            <div class="ui checkbox">
+              <input type="checkbox" name="example" [(ngModel)]="updatePass" (change)="updatePassword()">
+              <label>Update Credentials</label>
+            </div>
+            <div class="toggleBtnCredentials" *ngIf="showOnPassCheck">
+              <section [class.activeTab]="activeTab1" (click)="tabSelection('username')">Username</section>
+              <section [class.activeTab]="activeTab2" (click)="tabSelection('password')">Password</section>
+            </div>
+            <div *ngIf="showOnPassCheck" [ngSwitch]="credentialSwitch">
+              <div class="passFields" *ngSwitchDefault>
+                <div class="ui labeled input">
+                  <label class="ui label" id="oldPass">
+                  Old Username
+                </label>
+                  <input type="text" [value]="getOldUsername" disabled>
+                </div>
+                <div class="ui labeled input">
+                  <label class="ui label">
+                  New Username
+                </label>
+                  <input type="text" placeholder="something like 'xxxxxx@yyyy.com'" [(ngModel)]="newUser">
+                </div>
+              </div>
+              <div class="passFields" *ngSwitchCase="'password'" [class.leftborderradius]="leftradius">
+                <div class="ui labeled input">
+                  <label class="ui label" id="oldPass">
+                  Old Password
+                </label>
+                  <input type="text" [value]="getOldPassword" disabled>
+                </div>
+                <div class="ui labeled input">
+                  <label class="ui label">
+                  New Password
+                </label>
+                  <input type="text" placeholder="something like 'Asdsfde123'" [(ngModel)]="newPass">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="btnCont">
+            <button (click)="updateuser()" class="positive ui button" type="button">Save & Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customDiv" [@hideAnim] *ngSwitchCase="'likeShareClicked'" (click)="hideCustomDiv()"></div>
+  <div class="customInfo" [@hideAnim] *ngSwitchCase="'likeShareClicked'">
+    <button class="ui facebook button">
+  <i class="facebook icon"></i>
+  Facebook
+</button>
+    <button class="ui twitter button">
+  <i class="twitter icon"></i>
+  Twitter
+</button>
+    <button class="ui google plus button">
+  <i class="google plus icon"></i>
+  Google Plus
+</button>
+    <button class="ui vk button">
+  <i class="vk icon"></i>
+  VK
+</button>
+    <button class="ui linkedin button">
+  <i class="linkedin icon"></i>
+  LinkedIn
+</button>
+    <button class="ui instagram button">
+  <i class="instagram icon"></i>
+  Instagram
+</button>
+    <button class="ui youtube button">
+  <i class="youtube icon"></i>
+  YouTube
+</button>
+  </div>
+</div>

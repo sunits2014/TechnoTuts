@@ -1,0 +1,38 @@
+<div class="aboutContainer">
+  <div class="aboutBody">
+    <img src="assets/images/logo.png">
+    <div>
+      <p>TechnoTuts is a free portal developed by 
+        <span (click)="showCard('sunit')">Sunit Sinha
+          <div class="cardDiv" [@hideAnim] *ngIf="showCardDiv">
+          <div class="ui card customCard">
+            <div class="image">
+              <img src="assets/images/me.png">
+            </div>
+            <div class="content">
+              <a class="header">Sunit Sinha</a>
+              <div class="meta">
+                <span class="date">Front End/UI Developer</span>
+              </div>
+              <div class="description">
+                Experienced in HTML, CSS, jQuery, Bootstrap and Angular 4. Have some experience in Wordpress and Joomla as well.
+              </div>
+            </div>
+          </div>
+        </div>
+        </span>.<br> The purpose of this development is to provide
+        tutorials and ideas on UI aspects. Topics covered will be basically related to UI development, not service integration.
+      </p>
+      <p>
+        Sometimes, in pursuit of making a good UI with interactivity, developers often get inclined towards using ready-made UI frameworks
+        or libraries such as Bootstrap, Google Material etc. Ofcourse, they come with their own features and benefits, however,
+        one cannot ignore the load they put on the browser as well as the code. So, if we can achieve most of these tasks
+        with plain and custom code, it will give us more control over our code.
+      </p>
+      <button class="positive ui button" (click)="goToDashboard()">
+        <span>Get Started</span>
+      </button>
+    </div>
+  </div>
+  <div class="blockUI" *ngIf="showCardDiv" (click)="showCard('noSunit')"></div>  
+</div>

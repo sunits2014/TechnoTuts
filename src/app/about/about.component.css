@@ -1,0 +1,103 @@
+.aboutContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutBody {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutBody img {
+  width: 20%;
+  pointer-events: none;
+}
+
+.aboutBody div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.aboutBody div p {
+  color: white;
+  text-align: center;
+}
+
+.aboutBody div p span {
+  text-decoration: underline;
+  cursor: pointer;
+  position: relative;
+}
+
+.blockUI {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.cardDiv {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 101;
+  top: -16em;
+  left: 3em;
+  padding: .5em;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 30px 0 #000;
+}
+
+.cardDiv:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  color: ghostwhite;
+  position: absolute;
+  top: 96%;
+  left: .25em;
+  font-size: 3em;
+  display: block;
+}
+
+.customCard {
+  width: 28em !important;
+  flex-direction: row !important;
+  box-shadow: 0 0 0 0 !important;
+}
+
+.customCard > .image {
+  flex-basis: 50% !important;
+  border-radius: 4px !important;
+}
+
+.customCard > .image > img {
+  width: 100% !important;
+}
+
+.customCard > .content {
+  border-top: none !important;
+}
+
+.customCard > .content > .meta {
+  color: #999 !important;
+}
+
+.customCard > .content > .meta > span {
+  text-decoration: none !important;
+}

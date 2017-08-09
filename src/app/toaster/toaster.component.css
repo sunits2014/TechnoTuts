@@ -1,0 +1,36 @@
+.blockUI {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 500;
+}
+
+.toaster {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  /* left: 2em; */
+  right: 1em;
+  top: 1em;
+  border-radius: 4px;
+  overflow: auto;
+  background-color: darkorange;
+  padding: .5em;
+  min-width: 18em;
+  justify-content: center;
+}
+
+.warningText {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

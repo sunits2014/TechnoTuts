@@ -1,0 +1,132 @@
+<menu-list (changeClass)="classVal($event)" (userNameUpdate)="getnewUsernameUpdate($event)"></menu-list>
+<resume-view (closeView)="closeRes($event)" *ngIf="resumeBody"></resume-view>
+<div class="tutorialContainer" [class.slideRight]="slideIn">
+  <nav>
+    <aside id="menuBtn">
+      <span [class.rotateClass]="addClass" (click)="addRotateClass()" title="Menu">
+                <a id="middleArrow"></a>
+            </span>
+      <a class="ion-code authorIcon" title="Developer Info" (click)="resumeSwitch()"></a>
+    </aside>
+    <header>
+      <img src="assets/images/logo.png">
+      <span>TechnoTuts, a knowledgebase.</span>
+    </header>
+    <aside id="nameSpace">
+      <i>Hello<em [innerText]="usernameText"></em></i>
+      <i class="ion-android-globe" title="Notifications"></i>
+    </aside>
+  </nav>
+  <div class="tutsBody">
+    <div class="tutsblockUI" *ngIf="showToggle" (click)="hideMenu()"></div>
+    <div class="menuList">
+      <ul>
+        <li *ngFor="let menuItem of result" (click)="getMenuItem(menuItem)">
+          <a [class.active]="clicked === menuItem" (click)="clicked = menuItem">{{menuItem.title}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="contentBody" [ngSwitch]="switchView">
+      <app-toaster [@fadeToggle] *ngIf="onErrorToaster" [errorMsg]="errorMsg"></app-toaster>
+      <div *ngSwitchDefault class="landingSwitch">
+        <h1>'Hello World'</h1>
+        <div class="appDescription">
+          <p>This sample app has been developed using Angular 4.2.4 and for the UI Elements, I have used Semantic UI. For icons,
+            Font Awesome and Ionicons and lastly, for the css structure, I have implemented CSS3 Flexbox architecture. This
+            is a sample app with limited functionalities. There is no actual data exchange happenning, so please don't be
+            shocked to see whatever changes you make, go away as soon as the view changes.<br><br>
+            <span>Let's play a small quiz:</span>
+          </p>
+          <div class="attrBoxes">
+            <div class="questionnaire" [@zoomout] *ngIf="correctAnswer">
+              <ul>
+                <li *ngFor="let question of singleQues, let i = index">
+                  <span hidden>{{question.id}}</span>
+                  <h3><span>Question:</span> {{question.question}}</h3>                  
+                  <div class="mainRadio">
+                    <div class="radioContainer">
+                      <div class="radioContainerdiv">
+                        <input type="radio" name="question" id="question{{i}}" [value]="question.answer1" [(ngModel)]="myRadio">
+                        <label for="question{{i}}">{{question.answer1}}</label>
+                      </div>
+                      <div class="radioContainerdiv">
+                        <input type="radio" name="question" id="question{{i+1}}" [value]="question.answer2" [(ngModel)]="myRadio">
+                        <label for="question{{i+1}}">{{question.answer2}}</label>
+                      </div>
+                    </div>
+                    <div class="radioContainer">
+                      <div class="radioContainerdiv">
+                        <input type="radio" name="question" id="question{{i+2}}" [value]="question.answer3" [(ngModel)]="myRadio">
+                        <label for="question{{i+2}}">{{question.answer3}}</label>
+                      </div>
+                      <div class="radioContainerdiv">
+                        <input type="radio" name="question" id="question{{i+3}}" [value]="question.answer4" [(ngModel)]="myRadio">
+                        <label for="question{{i+3}}">{{question.answer4}}</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="btnContainer">
+                    <button (click)="submit(question.id)" type="button" class="primary ui button"><i class="checkmark icon"></i>OK</button>
+                    <button (click)="shuffle()" type="button" class="primary ui button"><i class="retweet icon"></i>SHUFFLE</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <ul>
+              <li [class.flipped]="aflip">
+                <div>
+                  <img src="assets/images/a4.png">
+                  <a href="https://angular.io/" target="_blank" (click)="prevState()">Learn More</a>
+                </div>
+                <div>
+                  <img src="assets/images/cardBG.png">
+                </div>
+              </li>
+              <li [class.flipped]="sflip">
+                <div>
+                  <img src="assets/images/se.png">
+                  <a href="https://semantic-ui.com/" target="_blank" (click)="prevState()">Learn More</a>
+                </div>
+                <div>
+                  <img src="assets/images/cardBG.png">
+                </div>
+              </li>
+              <li [class.flipped]="faflip">
+                <div>
+                  <img src="assets/images/fa.png">
+                  <a href="http://fontawesome.io/" target="_blank" (click)="prevState()">Learn More</a>
+                </div>
+                <div>
+                  <img src="assets/images/cardBG.png">
+                </div>
+              </li>
+              <li [class.flipped]="iflip">
+                <div>
+                  <img src="assets/images/ion.png">
+                  <a href="http://ionicons.com/" target="_blank" (click)="prevState()">Learn More</a>
+                </div>
+                <div>
+                  <img src="assets/images/cardBG.png">
+                </div>
+              </li>
+              <li [class.flipped]="fxflip">
+                <div>
+                  <img src="assets/images/fx.png">
+                  <a href="https://www.w3schools.com/css/css3_flexbox.asp" target="_blank" (click)="prevState()">Learn More</a>
+                </div>
+                <div>
+                  <img src="assets/images/cardBG.png">
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="btnContainer" *ngIf="!correctAnswer">
+            <button class="primary ui button" type="button" (click)="prevState()"><i class="undo icon"></i>Reset</button>
+          </div>
+        </div>
+      </div>
+      <check-box *ngSwitchCase="'checkBox'"></check-box>
+      <product-list *ngSwitchCase="'productList'"></product-list>
+    </div>
+  </div>
+</div>
