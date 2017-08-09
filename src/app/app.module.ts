@@ -18,6 +18,7 @@ import { CustomDivComponent } from './custom-div/custom-div.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ToasterComponent } from './toaster/toaster.component';
 import { AuthGuardService } from "./auth-guard.service";
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AuthGuardService } from "./auth-guard.service";
     ProductListComponent,
     CustomDivComponent,
     CheckboxComponent,
-    ToasterComponent,    
+    ToasterComponent,
+    ErrorComponent,    
   ],
   imports: [
     BrowserModule,
