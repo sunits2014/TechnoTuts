@@ -4,6 +4,7 @@ import { LoginComponent } from "../login/login.component";
 import { AboutComponent } from "../about/about.component";
 import { TutorialsComponent } from "../tutorials/tutorials.component";
 import { AuthGuardService } from "../auth-guard.service";
+import { ErrorComponent } from "../error/error.component";
 
 const routes: Routes = [
     {
@@ -19,6 +20,10 @@ const routes: Routes = [
         path:'tutorials',
         canActivate: [AuthGuardService],
         component: TutorialsComponent
+    },
+    {
+        path: 'error',
+        component: ErrorComponent
     }
 ];
 
