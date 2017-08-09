@@ -9,7 +9,8 @@ export class AuthGuardService implements CanActivate {
   canActivate() {
     let loggedIn = JSON.parse(localStorage.getItem('currentUser'));
     if(loggedIn.name == "" || loggedIn.password == "") {
-      this.route.navigate(['']);
+      this.route.navigate(['/error'])
+      console.log('redirecting as no credentials');
     }
     return true
   }
